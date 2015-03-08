@@ -1,3 +1,97 @@
+# Foundation Localization (v4.0) 3/8/2015
+
+Nicholas Ventimiglia | AvariceOnline.com
+
+The localization service provides translation of UI elements and strings on demand.
+
+- It supports csv format
+- It partitions languages by folder : ie : Resources/Localization/English
+- It supports multiple files : ie : Resources/Localization/English/LobbyStrings.txt
+- Translate strings by asking for the key. LocalizationService.Instance.Get("key");
+- Automagical update of strings using the [Localized] annotation
+- Yandex translator built in (Like google translate)
+- TextBinder supports uGUI
+- Supports Unity3d 5
+
+
+##Setup
+- FullSerializer is required. Located in plugin folder. (https://github.com/jacobdufault/fullserializer)
+- LocalizationService Scriptable object located in /Resources/
+- Place CSV formatted Language files inside /Resources/Localization/{LanguageName}/{filename}.txt
+
+####Example Csv File
+
+````
+Eamples.ExampleString1, Hello Friend
+Eamples.ExampleString2, "Hello, Will you End Me ?"
+Eamples.ExampleString3, My Cat is pretty lol.
+````
+
+##Yandex Translator
+Editor window is located under Tools/Foundation/Yandex Translator. Add your API key (free) (https://api.yandex.com/key/form.xml?service=trnsl), select the languages you want to support and press the magic button.
+
+##Use
+
+
+####uGUI Text
+Just slap the LocalizedText monobehaviour on the text field, select the file you want and select the key you want. Your ui text element will now be translated.
+    
+    
+
+####Code Behind
+````
+    /// <summary>
+    /// Example of how to localize your code behind
+    /// </summary>
+    [Localized("Eamples.ExampleString1")]
+    public static string ExampleString = "Hello Friend";
+
+
+    public void Awake()
+    {
+        //Localizes the example string
+        LocalizationService.Instance.Localize(this);
+
+        //alt way of getting strings
+        var s = LocalizationService.Instance.Get("Eamples.ExampleString1");
+
+        // auto magical string updates
+        var s2 = ExampleString;
+    }
+````
+    
+####Changing the language
+````
+    /// <summary>
+    /// Example of how to change the language
+    /// </summary>
+    public void RandomLanguage()
+    {
+        var languages = LocalizationService.Instance.Languages;
+        
+        LocalizationService.Instance.Language = Random(languages);
+    }
+````
+
+    
+####Language Change Events
+````
+        private void Awake()
+        {
+            LocalizationService.OnLanguageChanged += OnLocalization;
+        }
+
+        private void OnDestroy()
+        {
+            LocalizationService.OnLanguageChanged -= OnLocalization;
+        }
+
+        public void OnLocalization(LocalizationService localization)
+        {
+            GetComponent<Text>().text = localization.GetFromFile(File, Key, label.text);
+        }
+````
+
 ## More
 
 Part of the Unity3d Foundation toolkit. A collection of utilities for making high quality data driven games. http://unity3dFoundation.com
