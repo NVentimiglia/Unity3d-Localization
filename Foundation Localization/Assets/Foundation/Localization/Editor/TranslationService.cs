@@ -80,7 +80,7 @@ namespace Assets.Foundation.Localization.Editor
             //init
            var instance =  LocalizationService.Instance;
 
-            Options = LocalizationService.Instance.Languages.Select(o => new LangOption
+           Options = instance.Languages.Select(o => new LangOption
             {
                 lang = o,
                 Translate = true

@@ -24,6 +24,9 @@ namespace Foundation.Localization
         [HideInInspector]
         public string Key;
 
+        [HideInInspector]
+        public string Filter;
+
         protected string Fallback;
 
         [HideInInspector] public string Value;

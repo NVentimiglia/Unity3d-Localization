@@ -62,7 +62,19 @@ namespace Assets.Foundation.Localization.Editor
                 //
                 if (!string.IsNullOrEmpty(Target.File))
                 {
-                    var words = service.StringsByFile[Target.File].Select(o => o.Key).ToArray();
+                    //filter
+                    Target.Filter = EditorGUILayout.TextField("Filter ", Target.Filter);
+
+                    string[] words;
+
+                    if (!string.IsNullOrEmpty(Target.Filter))
+                    {
+                        words = service.StringsByFile[Target.File].Select(o => o.Key).Where(o => o.Contains(Target.Filter)).ToArray();
+                    }
+                    else
+                    {
+                        words = service.StringsByFile[Target.File].Select(o => o.Key).ToArray();
+                    }
                     var index = Array.IndexOf(words, Target.Key);
 
                     var i = EditorGUILayout.Popup("Keys", index, words);
@@ -73,7 +85,6 @@ namespace Assets.Foundation.Localization.Editor
                         Target.Value = service.Get(Target.Key, string.Empty);
                         EditorUtility.SetDirty(target);
                     }
-                    
                 }
 
             }
