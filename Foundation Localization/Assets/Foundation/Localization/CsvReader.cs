@@ -5,8 +5,6 @@
 //  Published		: 2015
 //  -------------------------------------
 using System.Collections.Generic;
-using System.IO;
-using System.Text;
 
 namespace Foundation.Localization
 {
@@ -16,26 +14,7 @@ namespace Foundation.Localization
     public static class CsvReader
     {
         #region CSV
-
-        public static List<string[]> ReadCSVfile(string path)
-        {
-#if UNITY_WEBPLAYER
-			Path = System.IO.Path.GetFileNameWithoutExtension(Path);
-			TextAsset Asset = Resources.Load(Path, typeof(TextAsset)) as TextAsset;
-			if (Asset==null)
-			{
-				Debug.LogWarning ("When Build type is WebPlayer, CSV files have to located inside the Resources folder");
-				return new List<string[]>();
-			}
-            byte[] buffer = Asset.bytes;
-#else
-            var buffer = File.ReadAllBytes(path);
-#endif
-            var text = Encoding.UTF8.GetString(buffer);
-            text = text.Replace("\r\n", "\n");
-            return ReadCSV(text);
-        }
-
+        
         public static List<string[]> ReadCSV(string text)
         {
             var iStart = 0;
