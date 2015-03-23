@@ -148,11 +148,41 @@ namespace Assets.Foundation.Localization.Editor
             }
             EditorGUILayout.Separator();
 
+            if (GUILayout.Button("Validate"))
+            {
+                Validate();
+            }
+            EditorGUILayout.Separator();
+
             if (GUILayout.Button("Documentation"))
             {
                 Documentation();
             }
             GUILayout.EndHorizontal();
+        }
+
+
+        void Validate()
+        {
+            var words = LocalizationService.Instance.Strings;
+
+            var myList = new List<string>();
+            int d = 0;
+
+            foreach (var word in words)
+            {
+                if (myList.Contains(word.Key))
+                {
+                    Debug.LogError("Duplicate found : " + word.Key);
+                    d++;
+                }
+                else
+                {
+                    myList.Add(word.Key);
+                }
+            }
+
+            Debug.LogWarning("Duplicates found : " + d);
         }
 
         void ShowWorking()

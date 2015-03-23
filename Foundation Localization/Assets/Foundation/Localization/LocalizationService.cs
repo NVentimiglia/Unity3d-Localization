@@ -220,6 +220,11 @@ namespace Foundation.Localization
                     var key = row[0];
                     var value = row[1].TrimEnd('\r');
 
+                    if (value.StartsWith("\"") && value.EndsWith("\""))
+                    {
+                        value = value.TrimEnd('"').TrimStart('"');
+                    }
+
                     StringsByFile[resource.name].Add(key, value);
 
                     if (Strings.ContainsKey(key))

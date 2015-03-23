@@ -22,10 +22,10 @@ namespace Foundation.Localization
         public string File;
 
         [HideInInspector]
-        public string Key;
+        public string Filter;
 
         [HideInInspector]
-        public string Filter;
+        public string Key;
 
         protected string Fallback;
 
