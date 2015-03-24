@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Foundation.Localization;
@@ -22,6 +23,8 @@ public class LocalizationExample : MonoBehaviour
 
         // auto magical string updates
         var s2 = ExampleString;
+
+        Debug.Log(String.Compare(s, s2, StringComparison.CurrentCulture));
     }
 
     /// <summary>

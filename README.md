@@ -1,6 +1,5 @@
-# Foundation Localization (v4.0) 3/8/2015
-
-Nicholas Ventimiglia | AvariceOnline.com
+#Foundation Localization
+3/24/2015 | Nicholas Ventimiglia | AvariceOnline.com
 
 The localization service provides translation of UI elements and strings on demand.
 
@@ -13,6 +12,9 @@ The localization service provides translation of UI elements and strings on dema
 - TextBinder supports uGUI
 - Supports Unity3d 5
 
+
+### Platforms
+Desktop, Webplayer, Android, iOS, Windows Store
 
 ##Setup
 - FullSerializer is required. Located in plugin folder. (https://github.com/jacobdufault/fullserializer)

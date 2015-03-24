@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>NVENTIMIGLIA-PC</Machine>
+    <WindowsUser>Nicholas</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <SolutionConfiguration>Master|x86</SolutionConfiguration>
+    <PackageArchitecture>x86</PackageArchitecture>
+    <PackageIdentityName>FoundationLocalization</PackageIdentityName>
+    <IntermediateOutputPath>D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\obj\x86\Master\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\Template.exe">
+      <PackagePath>Template.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assembly-CSharp-firstpass.dll">
+      <PackagePath>Assembly-CSharp-firstpass.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assembly-CSharp.dll">
+      <PackagePath>Assembly-CSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\FullSerializer - Unity - WinSA.dll">
+      <PackagePath>FullSerializer - Unity - WinSA.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\UnityEngine.dll">
+      <PackagePath>UnityEngine.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\UnityEngine.UI.dll">
+      <PackagePath>UnityEngine.UI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\UnityEngineProxy.dll">
+      <PackagePath>UnityEngineProxy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\WinRTLegacy.dll">
+      <PackagePath>WinRTLegacy.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\UnityPlayer.dll">
+      <PackagePath>UnityPlayer.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\BridgeInterface.dll">
+      <PackagePath>BridgeInterface.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\UnityEngineDelegates.dll">
+      <PackagePath>UnityEngineDelegates.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\BridgeInterface.winmd">
+      <PackagePath>BridgeInterface.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\UnityEngineDelegates.winmd">
+      <PackagePath>UnityEngineDelegates.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\UnityPlayer.winmd">
+      <PackagePath>UnityPlayer.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Players\Windows81\x86\Master\WinRTBridge.winmd">
+      <PackagePath>WinRTBridge.winmd</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assets\MediumTile.scale-100.png">
+      <PackagePath>Assets\MediumTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Assets\WideTile.scale-100.png">
+      <PackagePath>Assets\WideTile.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\mainData">
+      <PackagePath>Data\mainData</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\PlayerConnectionConfigFile">
+      <PackagePath>Data\PlayerConnectionConfigFile</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\Resources\unity default resources">
+      <PackagePath>Data\Resources\unity default resources</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\Resources\unity_builtin_extra">
+      <PackagePath>Data\Resources\unity_builtin_extra</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\managedAssemblies.txt">
+      <PackagePath>Data\managedAssemblies.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\resources.assets">
+      <PackagePath>Data\resources.assets</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\Data\sharedassets0.assets">
+      <PackagePath>Data\sharedassets0.assets</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\Template.xr.xml">
+      <PackagePath>Template.xr.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Builds\WSA\Foundation Localization\bin\x86\Master\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>ARM</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\ARM\Microsoft.VCLibs.ARM.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\x64\Microsoft.VCLibs.x64.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\">
+      <Name>Microsoft.VCLibs.120.00</Name>
+      <Version>12.0.21005.1</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.VCLibs.120.00, MinVersion = 12.0.21005.1</FrameworkIdentity>
+      <AppxLocation>C:\Program Files %28x86%29\Microsoft SDKs\Windows\v8.1\ExtensionSDKs\Microsoft.VCLibs\12.0\.\AppX\Retail\x86\Microsoft.VCLibs.x86.12.00.appx</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

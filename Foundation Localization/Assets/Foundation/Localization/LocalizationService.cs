@@ -148,7 +148,7 @@ namespace Foundation.Localization
         {
             if (!Application.isPlaying)
                 return;
-            
+
             PlayerPrefs.SetString("LocalizationService.Current", Language.Abbreviation);
             PlayerPrefs.Save();
         }
@@ -248,7 +248,11 @@ namespace Foundation.Localization
 
         public static bool HasAttribute<T>(MemberInfo m) where T : Attribute
         {
+#if UNITY_WSA && !UNITY_EDITOR
+            return m.CustomAttributes.Any(o => o.AttributeType == typeof (T));
+#else
             return Attribute.IsDefined(m, typeof(T));
+#endif
         }
         #endregion
 
@@ -343,8 +347,12 @@ namespace Foundation.Localization
         public void Localize(object instance)
         {
 
+#if UNITY_WSA && !UNITY_EDITOR
+            var typeInfo = instance.GetType().GetTypeInfo();
+            var fields = typeInfo.DeclaredFields.Where(o => HasAttribute<LocalizedAttribute>(o));
+#else
             var fields = instance.GetType().GetFields().Where(o => Attribute.IsDefined(o, typeof(LocalizableAttribute)));
-
+#endif
             foreach (var member in fields)
             {
                 if (member.FieldType != typeof(string))
@@ -371,9 +379,11 @@ namespace Foundation.Localization
                 member.SetValue(instance, val);
             }
 
+#if UNITY_WSA && !UNITY_EDITOR
+            var props = typeInfo.DeclaredProperties.Where(o => HasAttribute<LocalizedAttribute>(o));
+#else
             var props = instance.GetType().GetProperties().Where(o => HasAttribute<LocalizedAttribute>(o));
-
-
+#endif
             foreach (var member in props)
             {
                 if (member.PropertyType != typeof(string))

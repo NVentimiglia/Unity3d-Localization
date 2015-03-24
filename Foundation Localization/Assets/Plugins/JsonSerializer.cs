@@ -43,6 +43,9 @@ namespace FullSerializer
             if (r.Failed)
                 throw r.AsException;
 
+            if (data.IsDictionary && data.AsDictionary.ContainsKey("$content"))
+                data = data.AsDictionary["$content"];
+
             if (!prettyJson)
                 return fsJsonPrinter.CompressedJson(data);
 
