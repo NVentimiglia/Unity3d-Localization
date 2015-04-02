@@ -18,10 +18,10 @@ namespace Foundation.Localization
     /// 
     /// Features :
     /// - Partitions languages by sub folder
-    /// - Reads from csv.(key, value\n)
+    /// - Reads from csv. (key, value\n)
     /// - Support for multiple files for logical partitioning of 'keys'
     /// - Win32 Translator and converter available on the website avariceonline.com
-    /// - Support for fallback value if not found
+    /// - Support for fall-back value if not found
     /// - White list code variables with annotation and use GetForMembers() to automatically resolve content 
     /// Use :
     /// Add LocalizationService script to scene
@@ -68,19 +68,15 @@ namespace Foundation.Localization
         public List<string> Files { get; set; }
 
         /// <summary>
-        /// if true, language changes will persist between loads
-        /// </summary>
-        public bool CacheLanguage = true;
-
-        /// <summary>
         /// Default
         /// </summary>
+        [HideInInspector]
         public LanguageInfo DefaultLanguage = LanguageInfo.English;
 
         /// <summary>
         /// Current language
         /// </summary>
-        [SerializeField]
+        [HideInInspector]
         private LanguageInfo _language = LanguageInfo.English;
         public LanguageInfo Language
         {
@@ -111,13 +107,7 @@ namespace Foundation.Localization
 
         public void OnEnable()
         {
-            ReadFiles();
-
-            if (!CacheLanguage)
-            {
-                Language = DefaultLanguage;
-                return;
-            }
+            LoadLanguage();
 
 #if UNITY_EDITOR
             if (!UnityEditor.EditorApplication.isPlayingOrWillChangePlaymode)
@@ -125,6 +115,11 @@ namespace Foundation.Localization
                 return;
             }
 #endif
+            ReadFiles();
+        }
+
+        void LoadLanguage()
+        {
             var raw = PlayerPrefs.GetString("LocalizationService.Current");
             if (string.IsNullOrEmpty(raw))
             {
@@ -132,11 +127,13 @@ namespace Foundation.Localization
                 return;
             }
 
+
             var lan = Languages.FirstOrDefault(o => o.Abbreviation == raw);
             if (lan == null)
             {
-                Debug.LogError("Unknowen language saved to prefs : " + raw);
+                Debug.LogError("Unknown language saved to prefs : " + raw);
                 Language = DefaultLanguage;
+                SaveToPrefs();
             }
             else
             {
@@ -146,9 +143,6 @@ namespace Foundation.Localization
 
         void SaveToPrefs()
         {
-            if (!Application.isPlaying)
-                return;
-
             PlayerPrefs.SetString("LocalizationService.Current", Language.Abbreviation);
             PlayerPrefs.Save();
         }
@@ -367,7 +361,7 @@ namespace Foundation.Localization
                 var key = attr.Key;
                 var group = attr.Group;
 
-                // get fallback value
+                // get fall back value
                 if (string.IsNullOrEmpty(attr.FallbackValue))
                 {
                     attr.FallbackValue = (string)member.GetValue(instance);
@@ -398,7 +392,7 @@ namespace Foundation.Localization
                 var key = attr.Key;
                 var group = attr.Group;
 
-                // get fallback value
+                // get fall back value
                 if (string.IsNullOrEmpty(attr.FallbackValue))
                 {
                     attr.FallbackValue = (string)member.GetValue(instance, null);
