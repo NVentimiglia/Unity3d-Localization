@@ -1,7 +1,5 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Assets.Foundation.Localization.Editor;
 using UnityEditor;
 using UnityEngine;
@@ -12,6 +10,16 @@ namespace Foundation.Localization.Editor
     public class LocalizationServiceEditor : UnityEditor.Editor
     {
         protected LocalizationService Target;
+
+        
+        [MenuItem("Tools/Foundation/Localization Service")]
+        public static void ShowWindow()
+        {
+            LocalizationInitializer.Startup();
+            Selection.activeObject = LocalizationService.Instance;
+            EditorGUIUtility.PingObject(LocalizationService.Instance);
+
+        }
 
         public override void OnInspectorGUI()
         {
