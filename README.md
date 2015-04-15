@@ -7,7 +7,7 @@ The localization service provides translation of UI elements and strings on dema
 - It partitions languages by folder : ie : Resources/Localization/English
 - It supports multiple files : ie : Resources/Localization/English/LobbyStrings.txt
 - Translate strings by asking for the key. LocalizationService.Instance.Get("key");
-- Automagical update of strings using the [Localized] annotation
+- Automatic update of strings using the [Localized] annotation
 - Yandex translator built in (Like google translate)
 - TextBinder supports uGUI
 - Supports Unity3d 5
