@@ -30,7 +30,7 @@ Eamples.ExampleString3, My Cat is pretty lol.
 ````
 
 ##Yandex Translator
-Editor window is located under Tools/Foundation/Yandex Translator. Add your API key (free) (https://api.yandex.com/key/form.xml?service=trnsl), select the languages you want to support and press the magic button.
+Editor window is located under Tools/Foundation/Yandex Translator. Add your API key (free) (https://api.yandex.com/key/form.xml?service=trnsl), select the languages you want to support and press the button.
 
 ##Use
 
