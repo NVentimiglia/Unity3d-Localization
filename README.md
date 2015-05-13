@@ -100,6 +100,7 @@ Adding most languages is as easy as running the custom Yandex translation servic
 - Create a new Localization/Resources/{MyLanguage} folder
 - Copy required csv files
 - Added the language to the Static Resource language list.
+- Update LanguageInfo.cs with the new language
 
 
 ![alt tag](https://github.com/NVentimiglia/Unity3d-Localization/blob/master/CustomLanguageHard.gif)
