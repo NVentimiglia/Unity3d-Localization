@@ -1,4 +1,0 @@
-Assembly-CSharp-firstpass.dll
-Assembly-CSharp.dll
-FullSerializer - Unity - WinSA.dll
-UnityEngine.UI.dll

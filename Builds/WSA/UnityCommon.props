@@ -1,7 +1,0 @@
-<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<PropertyGroup>
-		<UnityInstallationDir>D:\Program Files\Unity\Editor</UnityInstallationDir>
-		<UnityWSAPlayerDir>D:\Program Files\Unity\Editor\Data\PlaybackEngines\metrosupport</UnityWSAPlayerDir>
-		<UnityProjectDir>D:\Users\Nicholas\Projects\Unity\Foundation\Foundation.Localization\Foundation Localization</UnityProjectDir>
-	</PropertyGroup>
-</Project>
